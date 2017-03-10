@@ -281,9 +281,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
             protected void onPostExecute(String result) {
-                String[] resultArray = result.split("#");
+//                String[] resultArray = result.split("#");
 //                String url = "http://95.105.237.84/generateHaiku?seedWord=" + resultArray[0];
-                result = result + String.valueOf(new GetUrlContentTask().execute(resultArray[1]));
+                result = result + String.valueOf(new GetUrlContentTask().execute(result));
                 mImageDetails.setText(result);
             }
         }.execute();
